@@ -1,0 +1,36 @@
+<div class="main-component">
+
+  <div ng-hide="ctrl.isAuthenticated">
+    Please enter your company code: <input ng-model="code"/><br/>
+    <div ng-show="ctrl.showError">
+    	{{ ctrl.errorMessage }}
+    </div>
+    <br/>
+    <button class="button openButton" type="button" ng-click="ctrl.login(code)">OK</button>
+  </div>
+
+  <div ng-show="ctrl.isAuthenticated">
+    <div class="headMargin">
+      <h1>Settings</h1>
+    </div>
+
+    <div class="divMargin">
+      <div id="Menu">
+        <div ng-repeat="(key, value) in ctrl.message track by $index">
+          <input  id="{{key}}" type="text" class="inputText" value="{{value}}"/>
+          <br />
+        </div>
+      </div> 
+
+      <div ng-show="ctrl.showSaveSuccess">
+        {{ ctrl.saveSuccess }}
+      </div>
+
+      <br />
+      <button type="button" class="button cancelButton">Cancel</button>
+      <button type="button" class="button saveButton" ng-click="ctrl.saveConfirm()">Save</button>
+      <br /><br /><br />
+    </div> 
+  </div>
+
+</div>
