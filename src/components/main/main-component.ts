@@ -13,8 +13,6 @@ export function MainComponent() {
 const MainController = function ($http) {
   let companyCode = '1234';
 
-  this.$http = $http;
-  // // this.jsonService = jsonService;
   this.isAuthenticated = false;
   this.showError = false;
   this.showSaveSuccess = false;
@@ -23,10 +21,10 @@ const MainController = function ($http) {
 		if (code != null && code.length === 4) {
 			this.companyCode = code;
 
-			this.$http.get('http://localhost:5000/getClientSettings', { params: { comCode: this.companyCode} })
+			$http.get('http://localhost:5000/getClientSettings', { params: { comCode: this.companyCode} })
 		  	.then((response) => {
-				this.message = response.data;
-			});
+					this.message = response.data;
+				});
 
 			this.isAuthenticated = true;
 		  return companyCode;
@@ -39,29 +37,29 @@ const MainController = function ($http) {
 
   this.saveConfirm = () => {
 		let inputs = document.getElementById('Menu').getElementsByTagName('input');
-		let obj = Object();
+		let objEn = Object();
 		let objFr = Object();
 
-		console.log(companyCode);
-
 		for (let i = 0; i < inputs.length; i++) {
-	    obj[inputs[i].id] = inputs[i].value;
+	    objEn[inputs[i].id] = inputs[i].value;
 		  objFr[inputs[i].id] = inputs[i].value + 'FRENCH';
 		}
 
 		const jsonObj = {
-			JsonObjectEn: obj,
+			JsonObjectEn: objEn,
 			JsonObjectFr: objFr
 		};
 
-		console.log(JSON.stringify(obj));
-
-		this.$http.post('http://localhost:5000/saveClientChanges/' + this.companyCode, jsonObj)
-		.then((response) => {
-			this.saveSuccess = response.data;
-			this.showSaveSuccess = true;
-		});
+		$http.post('http://localhost:5000/saveClientChanges/' + this.companyCode, jsonObj)
+			.then((response) => {
+				this.saveSuccess = response.data;
+				this.showSaveSuccess = true;
+			});
 	};
+
+	this.cancelChanges = () => {
+		this.isAuthenticated = false;
+	}
 };
 
 MainController.$inject = ['$http'];

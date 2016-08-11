@@ -1,12 +1,14 @@
 <div class="main-component">
 
   <div ng-hide="ctrl.isAuthenticated">
-    Please enter your company code: <input ng-model="code"/><br/>
-    <div ng-show="ctrl.showError">
-    	{{ ctrl.errorMessage }}
+    <div class="loginMargin">
+      Please enter your company code: <input class="inputCode" ng-model="code"/><br/>
+      <div class="errorMessage" ng-show="ctrl.showError">
+        {{ ctrl.errorMessage }}
+      </div>
+      <br/>
+      <button class="button okButton" type="button" ng-click="ctrl.login(code)">OK</button>
     </div>
-    <br/>
-    <button class="button openButton" type="button" ng-click="ctrl.login(code)">OK</button>
   </div>
 
   <div ng-show="ctrl.isAuthenticated">
@@ -22,13 +24,14 @@
         </div>
       </div> 
 
-      <div ng-show="ctrl.showSaveSuccess">
+      <div class="saveSuccessMessage" ng-show="ctrl.showSaveSuccess">
+        <br />
         {{ ctrl.saveSuccess }}
       </div>
 
       <br />
-      <button type="button" class="button cancelButton">Cancel</button>
       <button type="button" class="button saveButton" ng-click="ctrl.saveConfirm()">Save</button>
+      <button type="button" class="button cancelButton" ng-click="ctrl.cancelChanges()">Cancel</button>
       <br /><br /><br />
     </div> 
   </div>

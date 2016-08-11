@@ -1,30 +1,145 @@
-@import 'basscss-basic';
+.headMargin {
+  border: 0;
+  margin: 50px 50px 30px 50px;
+  padding: 0px 30px 0px 50px;
+  font-family: 'Helvetica',sans-serif;
 
-/* Add-on Modules */
-@import 'basscss-addons/modules/btn';
-@import 'basscss-addons/modules/btn-primary';
-@import 'basscss-addons/modules/background-colors';
-@import 'basscss-addons/modules/colors';
-@import 'basscss-addons/modules/forms';
-@import 'basscss-addons/modules/input-range';
-@import 'basscss-addons/modules/responsive-margin';
-@import 'basscss-addons/modules/responsive-padding';
-@import 'basscss-addons/modules/media-object';
-@import 'basscss-addons/modules/all';
-@import 'basscss-addons/modules/progress';
-@import 'basscss-addons/modules/lighten';
-@import 'basscss-addons/modules/background-images';
-@import 'basscss-addons/modules/darken';
+}
 
-/* Base Modules */
-@import 'basscss-type-scale';
-@import 'basscss-typography';
-@import 'basscss-layout';
-@import 'basscss-align';
-@import 'basscss-margin';
-@import 'basscss-padding';
-@import 'basscss-grid';
-@import 'basscss-flexbox';
-@import 'basscss-position';
-@import 'basscss-border';
-@import 'basscss-hide';
+.divMargin {
+  border: 100%;
+  background-color: #ecf9ec;
+  margin: 30px 50px 30px 50px;
+  padding: 10px 30px 0px 50px;
+}
+
+.loginMargin {
+  border-bottom: 6px solid red;
+  background-color: #ecf9ec;
+  padding: 20px 50px 50px 50px;
+  border-radius: 2px;
+  margin: 230px 700px 230px 700px;
+  float: center;
+  font-family: 'Helvetica',sans-serif;
+  font-size: 1.0em;
+  text-align: center;
+}
+
+.errorMessage {
+  font-size: 13px;
+  color: red;
+  font-style: italic;
+}
+
+.inputCode {
+  width: 60px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 3px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+.inputCode:focus{
+  width: 60px;
+  display: inline-block;
+  border: 1px solid #4CAF50;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.inputCode:hover {
+  background-color: #fcfcfc;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button.okButton {
+  background-color: #4CAF50;
+  color: white;
+  width: 90px;
+  height: 34px;
+  float: center;
+  border: 2px solid #4CAF50;
+}
+
+.button.okButton:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.button.saveButton {
+  background: #4CAF50;
+  color: white;
+  width: 100px;
+  float: left;
+  text-align: center;
+  border: 2px solid #4CAF50;
+}
+
+.button.saveButton:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.button.cancelButton {
+  background: #cccccc;
+  padding: 6px 20px;
+  color: #666;
+  width: 100px;
+  float: left;
+  text-align: center;
+  border: 2px solid #cccccc;
+}
+
+.button.cancelButton:hover {
+  background-color: white;
+}
+
+.inputText {
+  width: 30%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+
+.inputText:focus{
+  width: 96%;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #4CAF50;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.inputText:hover {
+  background-color: #fcfcfc;
+}
+
+.saveSuccessMessage {
+  font-size: 13px;
+  color: green;
+  font-style: italic;
+}
+

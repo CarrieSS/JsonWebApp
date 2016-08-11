@@ -22,7 +22,7 @@ module.exports = {
     'inline-source-map' :
     'inline-source-map',
 
-  resolve: { extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'] },
+  resolve: { extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.css'] },
   plugins: plugins,
   postcss: postcssInit,
 
