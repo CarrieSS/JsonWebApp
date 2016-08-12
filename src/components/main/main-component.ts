@@ -23,7 +23,8 @@ const MainController = function ($http) {
 
 			$http.get('http://localhost:5000/getClientSettings', { params: { comCode: this.companyCode} })
 		  	.then((response) => {
-					this.message = response.data;
+					this.messageEn = response.data.FileEn;
+					this.messageFr = response.data.FileFr;
 				});
 
 			this.isAuthenticated = true;
@@ -41,7 +42,7 @@ const MainController = function ($http) {
 		let objFr = Object();
 
 		for (let i = 0; i < inputs.length; i++) {
-	    objEn[inputs[i].id] = inputs[i].value;
+	      objEn[inputs[i].id] = inputs[i].value;
 		  objFr[inputs[i].id] = inputs[i].value + 'FRENCH';
 		}
 
