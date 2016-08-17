@@ -3,8 +3,10 @@
   <div ng-hide="ctrl.isAuthenticated">
     <div class="loginMargin">
       Please enter your company code: <input class="inputCode" ng-model="code"/><br/>
-      <div class="errorMessage" ng-show="ctrl.showError">
-        {{ ctrl.errorMessage }}
+      <div class="errorMessage">
+        <span ng-show="ctrl.showError"> 
+          {{ ctrl.errorMessage }}
+        </span>
       </div>
       <br/>
       <button class="button okButton" type="button" ng-click="ctrl.login(code)">OK</button>
@@ -19,14 +21,16 @@
     <div class="divMargin">
       <div id="Menu">
         <div ng-repeat="(key, value) in ctrl.messageEn track by $index">
-          <input  id="{{key}}" type="text" class="inputText" value="{{value}}"/>
+          <input  id="{{key}}" type="text" class="inputText" placeholder="{{value}}"/>
           <br />
         </div>
       </div> 
 
-      <div class="saveSuccessMessage" ng-show="ctrl.showSaveSuccess">
+      <div class="saveSuccessMessage">
         <br />
-        {{ ctrl.saveSuccess }}
+        <span ng-show="ctrl.showSaveSuccess">
+          {{ ctrl.saveSuccess }}
+        </span>
       </div>
 
       <br />

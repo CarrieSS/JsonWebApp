@@ -1,3 +1,7 @@
+.bodySize {
+  width: 100%;
+}
+
 .headMargin {
   border: 0;
   margin: 50px 50px 30px 50px;
@@ -14,11 +18,12 @@
 }
 
 .loginMargin {
+
   border-bottom: 6px solid red;
   background-color: #ecf9ec;
-  padding: 20px 50px 50px 50px;
+  padding: 30px 50px 35px 50px;
   border-radius: 2px;
-  margin: 230px 700px 230px 700px;
+  margin: 230px 0px 230px 0px;
   float: center;
   font-family: 'Helvetica',sans-serif;
   font-size: 1.0em;
@@ -55,10 +60,7 @@
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
   border-radius: 3px;
-  color: white;
   padding: 6px 25px;
   text-align: center;
   display: inline-block;
@@ -89,7 +91,6 @@
   color: white;
   width: 100px;
   float: left;
-  text-align: center;
   border: 2px solid #4CAF50;
 }
 
@@ -104,7 +105,6 @@
   color: #666;
   width: 100px;
   float: left;
-  text-align: center;
   border: 2px solid #cccccc;
 }
 
