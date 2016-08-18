@@ -39,6 +39,7 @@ module.exports = {
     loaders: [
       loaders.ts,
       loaders.html,
+      { test: /\.jsx?$/, exclude: /(node_modules|bower_components)/, loader: 'babel' },
       loaders.css,
       loaders.svg,
       loaders.eot,

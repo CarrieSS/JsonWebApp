@@ -42,7 +42,7 @@ const MainController = function ($http, $timeout) {
   };
 
   this.saveConfirm = () => {
-		let inputs = document.getElementById('Menu').getElementsByTagName('input');
+		let inputs = document.getElementById('Menu').getElementsByTagName('textarea');
 		let objEn = Object();
 		let objFr = Object();
 
