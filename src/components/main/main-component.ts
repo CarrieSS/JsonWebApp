@@ -74,8 +74,8 @@ const MainController = function ($http, $timeout) {
 	};
 
 	this.cancelChanges = () => {
-		this.isAuthenticated = false;
 		this.messageEn = angular.copy(this.previousSetting);
+		window.location.reload(false);
 		return this.messageEn;
 	};
 };
