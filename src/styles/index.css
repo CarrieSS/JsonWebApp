@@ -1,4 +1,4 @@
-.headMargin {
+/*.headMargin {
   border: 0;
   margin: auto;
   margin-top: 50px;
@@ -15,8 +15,8 @@
   margin-bottom: 50px;
   width: 1500px;
   padding: 10px 70px 0px 70px;
-}
-
+}*/
+/*
 .loginMargin {
   border-bottom: 6px solid red;
   background-color: #ecf9ec;
@@ -32,7 +32,7 @@
   font-size: 1.0em;
   text-align: center;
 }
-
+*/
 .errorMessage {
   font-size: 13px;
   color: red;
@@ -51,7 +51,7 @@
   transition: width .3s ease-in-out;
 }
 
-.inputCode:focus{
+/*.inputCode:focus{
   width: 60px;
   display: inline-block;
   border: 1px solid #4CAF50;
@@ -61,6 +61,7 @@
 .inputCode:hover {
   background-color: #fcfcfc;
 }
+*/
 
 .button {
   border-radius: 3px;
@@ -69,7 +70,7 @@
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
   cursor: pointer;
 }
@@ -113,6 +114,7 @@
   background-color: white;
 }
 
+/*
 .inputText {
   width: 80%;
   padding: 6px 10px;
@@ -134,6 +136,11 @@
 }
 .inputText:hover {
   background-color: #fcfcfc;
+}*/
+.main-component .well{
+  background-color: #ddd;
+  width:40%;
+  margin: 50px auto;
 }
 
 .saveSuccessMessage {
@@ -142,3 +149,34 @@
   font-style: italic;
 }
 
+#Menu .form-control{
+  min-height: 3em;
+  width: 90%;
+  margin: auto;
+}
+
+#Menu .item{
+  margin: auto;
+  width:90%;
+  margin-bottom: 10px;
+}
+
+.container{
+  width:85%;
+  margin: auto;
+}
+
+.greytext{
+  color: #grey;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 1%;
+}
+
+.seperator{
+  height: 1px;
+  margin: 9px 1px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ddd;
+}
