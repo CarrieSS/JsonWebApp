@@ -1,62 +1,77 @@
 <div class="main-component">
   <div class="container" ng-hide="ctrl.isAuthenticated">
-        <div class="row well text-center">
-            <div class="col-md-8 col-md-offset-2">
-              Please enter your company code: <input class="inputCode" ng-model="code" placeholder="####"/><br/>
-            </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <span class="errorMessage"> 
-                {{ ctrl.errorMessage }} <br/><br/>
-              </span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <button class="button okButton" type="button" ng-click="ctrl.login(code)">OK</button>
-            </div>
+    <div class="row well text-center">
+      <div class="col-md-8 col-md-offset-2">
+        Please enter your company code: <br/>
+        <input class="inputCode" maxlength="4" ng-model="code" placeholder="####"/><br/>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="errorMessage" ng-show="ctrl.showError">
+            <span class="glyphicon glyphicon-exclamation-sign"></span> {{ ctrl.errorMessage }} <br/>
           </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <br/>
+          <button class="button okButton" type="button" ng-click="ctrl.login(code)">OK</button>
+        </div>
+      </div>
+    </div>
   </div>
-
+ 
   <div ng-show="ctrl.isAuthenticated">
     <div class="container">
       <div class="panel panel-default">
         <div class="jumbotron">
           <h1><span class="glyphicon glyphicon-cog"></span> Settings</h1>
         </div>
-
-        <div id="Menu">
-            <div class="item" ng-repeat="(key, value) in ctrl.messageEn track by $index">
-                <label> {{value}} </label>
-                <br/>
-                <textarea class="form-control" contenteditable="true" id="{{key}}" type="text" class="form-control" placeholder="{{value}}"></textarea>
-                <br/>
-            </div>
+ 
+        <div id="Menu" name="settings">
+          <div class="item" ng-repeat="(key, value) in ctrl.messageEn track by $index">
+            <label> {{value}} </label>
+            <br/>
+            <textarea class="form-control" contenteditable="true" id="{{key}}" type="text" placeholder="{{value}}"></textarea>
+            <br/>
+          </div>
         </div>
 
         <br/>
         <div class="row">
-          <div class="col-md-4 comdl--offset-5">
-            <div class="saveSuccessMessage">
-              <span ng-show="ctrl.showSaveSuccess">
-                {{ ctrl.saveSuccess }} <br /><br />
-              </span>
+          <div ng-show="ctrl.showSaveSuccess">
+            <div class="saveSuccessMessage" role="alert">
+              <span class="glyphicon glyphicon-ok-sign"></span> {{ ctrl.saveSuccess }} <br/><br/>
             </div>
           </div>
         </div>
-
+ 
         <div class="row">
           <div class="col-md-4 col-md-offset-5">
             <button type="button" class="button saveButton" ng-click="ctrl.saveConfirm()">Save</button>
-            <button type="button" class="button cancelButton" ng-click="ctrl.cancelChanges()">
-              Cancel
-            </button>
+            <button type="button" class="button cancelButton" data-toggle="modal" data-target=".bs-example-modal-sm">Cancel</button>
             <br /><br /><br />
-          </div> 
+          </div>
         </div>
+ 
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="modal-title" id="myModalLabel">
+                  Confirm to cancel all your changes?
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="button cancelButton noButton" data-dismiss="modal">No</button>
+                <button type="button" class="button saveButton yesButton" ng-click="ctrl.cancelChanges()">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
       </div>
     </div>
   </div>
-
 </div>
+ 

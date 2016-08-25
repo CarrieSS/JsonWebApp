@@ -1,42 +1,8 @@
-/*.headMargin {
-  border: 0;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  width: 1500px;
-  font-family: 'Helvetica',sans-serif;
-}
 
-.divMargin {
-  border: 100%;
-  background-color: #ecf9ec;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 1500px;
-  padding: 10px 70px 0px 70px;
-}*/
-/*
-.loginMargin {
-  border-bottom: 6px solid red;
-  background-color: #ecf9ec;
-  padding: 30px 0px 35px 0px;
-  border-radius: 2px;
-  margin: auto;
-  margin-top: 250px;
-  margin-bottom: 450px;
-  width: 500px;
-  height: 120px;
-  float: center;
-  font-family: 'Helvetica',sans-serif;
-  font-size: 1.0em;
-  text-align: center;
-}
-*/
 .errorMessage {
   font-size: 13px;
   color: red;
-  font-style: italic;
+  font-weight: bold;
 }
 
 .inputCode {
@@ -44,24 +10,13 @@
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 2px;
+  text-align: center;
   padding: 3px 10px;
   margin: 8px 0;
   box-sizing: border-box;
   -webkit-transition: width .35s ease-in-out;
   transition: width .3s ease-in-out;
 }
-
-/*.inputCode:focus{
-  width: 60px;
-  display: inline-block;
-  border: 1px solid #4CAF50;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-.inputCode:hover {
-  background-color: #fcfcfc;
-}
-*/
 
 .button {
   border-radius: 3px;
@@ -97,6 +52,15 @@
   border: 2px solid #4CAF50;
 }
 
+.button.saveButton.yesButton {
+  float: right;
+  width: 50px;
+  font-size: 12px;
+  padding: 4px 14px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
 .button.saveButton:hover {
   background-color: white;
   color: #4CAF50;
@@ -110,73 +74,48 @@
   border: 2px solid #cccccc;
 }
 
+.button.cancelButton.noButton {
+  float: right;
+  width: 50px;
+  font-size: 12px;
+  padding: 4px 14px;
+  display: inline-block;
+}
+
 .button.cancelButton:hover {
   background-color: white;
 }
 
-/*
-.inputText {
-  width: 80%;
-  padding: 6px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  box-sizing: border-box;
-  resize: none;
-}
-
-.inputText:focus{
-  padding: 6px 15px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #4CAF50;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-.inputText:hover {
-  background-color: #fcfcfc;
-}*/
-.main-component .well{
-  background-color: #ddd;
-  width:40%;
-  margin: 50px auto;
+.well{
+  width: 450px;
+  height: 185px;
+  margin: 300px auto;
+  border: 0;
+  border-radius: 1.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .saveSuccessMessage {
+  text-align: center;
   font-size: 13px;
   color: green;
-  font-style: italic;
+  font-weight: bold;
 }
 
 #Menu .form-control{
   min-height: 3em;
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
 #Menu .item{
   margin: auto;
-  width:90%;
+  width: 86%;
   margin-bottom: 10px;
+  justify-content: center;
 }
 
 .container{
   width:85%;
   margin: auto;
-}
-
-.greytext{
-  color: #grey;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 1%;
-}
-
-.seperator{
-  height: 1px;
-  margin: 9px 1px;
-  overflow: hidden;
-  background-color: #e5e5e5;
-  border-bottom: 1px solid #ddd;
 }

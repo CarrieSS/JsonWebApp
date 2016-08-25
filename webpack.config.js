@@ -7,6 +7,7 @@ const plugins = require('./webpack/plugins');
 const postcssInit = require('./webpack/postcss');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: { app: './src/index.ts' },
@@ -22,7 +23,9 @@ module.exports = {
     'inline-source-map' :
     'inline-source-map',
 
-  resolve: { extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.css'] },
+  resolve: { 
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.css', '.html'], 
+  },
   plugins: plugins,
   postcss: postcssInit,
 
@@ -41,11 +44,16 @@ module.exports = {
       loaders.html,
       { test: /\.jsx?$/, exclude: /(node_modules|bower_components)/, loader: 'babel' },
       loaders.css,
+      loaders.jquery,
+      // { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass'] },
       loaders.svg,
       loaders.eot,
       loaders.woff,
       loaders.woff2,
       loaders.ttf,
+      // { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' },
     ],
   },
+
+  // postcss: [autoprefixer],
 };

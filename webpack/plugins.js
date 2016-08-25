@@ -26,6 +26,13 @@ const basePlugins = [
   new CopyWebpackPlugin([
     { from: 'src/assets', to: 'assets' },
   ]),
+  // new ProvidePlugin({
+  //   jQuery: 'jquery',
+  //   $: 'jquery',
+  //   jquery: 'jquery',
+  //   // "Tether": 'tether',
+  //   // "window.Tether": "tether"
+  // }),
 ].concat(sourceMap);
 
 const devPlugins = [

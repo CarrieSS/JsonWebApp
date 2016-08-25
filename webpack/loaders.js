@@ -29,6 +29,12 @@ exports.css = {
   exclude: /node_modules/,
 };
 
+exports.jquery = {
+  test: /jquery\.js/,
+  loader: 'null-loader',
+  exclude: /node_modules/,
+}
+
 exports.svg = makeUrlLoader(/\.svg$/);
 exports.eot = makeUrlLoader(/\.eot$/);
 exports.woff = makeUrlLoader(/\.woff$/);
