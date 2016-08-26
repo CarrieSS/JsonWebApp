@@ -6,7 +6,7 @@
 }
 
 .inputCode {
-  width: 60px;
+  width: 70px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 2px;
@@ -28,6 +28,7 @@
   -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
   cursor: pointer;
+  margin: auto;
 }
 
 .button.okButton {
@@ -46,17 +47,18 @@
 
 .button.saveButton {
   background: #4CAF50;
-  margin-right: 20px;
+  margin-right: 10px;
   color: white;
   width: 100px;
   border: 2px solid #4CAF50;
+  float: center;
 }
 
 .button.saveButton.yesButton {
   float: right;
   width: 50px;
   font-size: 12px;
-  padding: 4px 14px;
+  padding: 4.5px 13px;
   margin-right: 5px;
   display: inline-block;
 }
@@ -68,17 +70,19 @@
 
 .button.cancelButton {
   background: #cccccc;
+  margin-left: 10px;
   padding: 6px 20px;
   color: #666;
   width: 100px;
   border: 2px solid #cccccc;
+  float: center;
 }
 
 .button.cancelButton.noButton {
   float: right;
   width: 50px;
   font-size: 12px;
-  padding: 4px 14px;
+  padding: 4.6px 14px;
   display: inline-block;
 }
 
@@ -92,6 +96,7 @@
   margin: 300px auto;
   border: 0;
   border-radius: 1.5px;
+  font-weight: bold;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

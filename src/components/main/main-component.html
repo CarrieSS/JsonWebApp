@@ -2,7 +2,7 @@
   <div class="container" ng-hide="ctrl.isAuthenticated">
     <div class="row well text-center">
       <div class="col-md-8 col-md-offset-2">
-        Please enter your company code: <br/>
+        <br/>Please enter your company code: <br/>
         <input class="inputCode" maxlength="4" ng-model="code" placeholder="####"/><br/>
       </div>
       <div class="row">
@@ -46,12 +46,10 @@
           </div>
         </div>
  
-        <div class="row">
-          <div class="col-md-4 col-md-offset-5">
-            <button type="button" class="button saveButton" ng-click="ctrl.saveConfirm()">Save</button>
-            <button type="button" class="button cancelButton" data-toggle="modal" data-target=".bs-example-modal-sm">Cancel</button>
-            <br /><br /><br />
-          </div>
+        <div class="row text-center">
+          <button type="button" class="button saveButton" ng-click="ctrl.saveConfirm()">Save</button>
+          <button type="button" class="button cancelButton" data-toggle="modal" data-target=".bs-example-modal-sm">Cancel</button>
+          <br /><br /><br />
         </div>
  
         <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog">
@@ -69,7 +67,6 @@
             </div>
           </div>
         </div>
- 
       </div>
     </div>
   </div>
